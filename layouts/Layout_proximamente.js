@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
+import FontAwesome, { Icons } from 'react-native-fontawesome';
+import { Icon, Header, Button } from 'react-native-elements';
 
 class proximamente extends React.Component {
 
@@ -9,7 +11,23 @@ class proximamente extends React.Component {
         <StatusBar
             backgroundColor='#F1F1F1'
             barStyle='dark-content'/>
-          <Image source={require('../images/proximamente_cover.png')} style={styles.cover}/>
+          <ImageBackground source={require('../images/proximamente_cover.png')} style={styles.cover}>
+          <View style={styles.button}>
+            <Button onPress={()=> this.props.navigation.navigate('form')}
+                title="Comparte un mapa"
+                titleStyle={{ fontWeight: "700" }}
+                buttonStyle={{
+                  backgroundColor: "transparent",
+                  width: 185,
+                  height: 50,
+                  borderColor: "white",
+                  borderWidth: 2,
+                  borderRadius: 30
+                }}
+                containerStyle={{ marginTop: 20 }}
+                />
+            </View>
+          </ImageBackground>
         </View>
     );
   }
@@ -26,6 +44,11 @@ const styles = StyleSheet.create({
   cover: {
     flex: 1,
     width: null,
-    resizeMode: 'cover'
   },
+  button: {
+    marginTop: 375,
+    flexDirection: 'column',
+    alignItems: 'center',
+    flex: 1,
+  }
 });

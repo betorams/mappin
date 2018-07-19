@@ -54,7 +54,7 @@ class HomeScreen extends React.Component {
           </TouchableOpacity>
         </View>
         <View style={styles.footer}>
-          <Image source={require('../images/copyright.png')} style={{ width: 147 }}/>
+          <Image source={require('../images/copyright.png')} style={{ width: 147, height: 16 }}/>
         </View>
         </ScrollView>
         </View>
