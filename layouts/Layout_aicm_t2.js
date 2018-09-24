@@ -1,14 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, WebView, ActivityIndicator, Platform } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, WebView, ActivityIndicator } from 'react-native';
 
-class centro_sf extends React.Component {
+class aicm_t2 extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      titleText: " -  Actualiza este mapa  - ",
-    };
-  }
+  static navigationOptions = {
+       title: 'Terminal 2',
+       headerTitleStyle :{textAlign: 'center', alignSelf:'center', fontSize: 18, fontWeight: 'normal', color: '#3E3E40' },
+       headerStyle:{
+           backgroundColor:'white',
+       },
+   };
 
   ActivityIndicatorLoadingView() {
     return (
@@ -27,7 +28,7 @@ class centro_sf extends React.Component {
             backgroundColor='#F1F1F1'
             barStyle='dark-content'/>
             <WebView
-                source={{uri: 'https://mapin.io/centro_santa_fe_page/'}}
+                source={{uri: 'https://mapin.io/aicm_t2_page/'}}
                 scalesPageToFit = {false}
                 javaScriptEnabled={true}
                 domStorageEnabled={true}
@@ -39,12 +40,17 @@ class centro_sf extends React.Component {
   }
 }
 
-export default centro_sf;
+export default aicm_t2;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EFF2F5',
+  },
+  footer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: 25,
   },
   shareText:{
     color:'#95989A',

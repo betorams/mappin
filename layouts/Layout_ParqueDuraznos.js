@@ -1,14 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, WebView, ActivityIndicator, Platform } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, WebView, ActivityIndicator } from 'react-native';
 
-class centro_sf extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      titleText: " -  Actualiza este mapa  - ",
-    };
-  }
+class parque_duraznos extends React.Component {
 
   ActivityIndicatorLoadingView() {
     return (
@@ -27,7 +20,7 @@ class centro_sf extends React.Component {
             backgroundColor='#F1F1F1'
             barStyle='dark-content'/>
             <WebView
-                source={{uri: 'https://mapin.io/centro_santa_fe_page/'}}
+                source={{uri: 'https://mapin.io/parque_duraznos_page/'}}
                 scalesPageToFit = {false}
                 javaScriptEnabled={true}
                 domStorageEnabled={true}
@@ -39,7 +32,7 @@ class centro_sf extends React.Component {
   }
 }
 
-export default centro_sf;
+export default parque_duraznos;
 
 const styles = StyleSheet.create({
   container: {

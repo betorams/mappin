@@ -4,9 +4,9 @@
     <item android:drawable="@drawable/background_gradient"/>
 
     <item
-        android:width="150dp"
-        android:height="150dp"
-        android:drawable="@drawable/pin_mapin_icon"
+        android:width="65dp"
+        android:height="65dp"
+        android:drawable="@drawable/pin_mapin_icon_gradient_site"
         android:gravity="center"
         />
 </layer-list>

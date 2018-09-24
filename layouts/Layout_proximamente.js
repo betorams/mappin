@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     width: null,
   },
   button: {
-    marginTop: 375,
+    marginTop: 355,
     flexDirection: 'column',
     alignItems: 'center',
     flex: 1,

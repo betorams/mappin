@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, WebView, ActivityIndicator, Platform } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity, WebView, ActivityIndicator } from 'react-native';
 
-class centro_sf extends React.Component {
+class ibero_cdmx extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,24 +27,34 @@ class centro_sf extends React.Component {
             backgroundColor='#F1F1F1'
             barStyle='dark-content'/>
             <WebView
-                source={{uri: 'https://mapin.io/centro_santa_fe_page/'}}
+                source={{uri: 'https://mapin.io/ibero_cdmx_page/'}}
                 scalesPageToFit = {false}
                 javaScriptEnabled={true}
                 domStorageEnabled={true}
                 renderLoading={this.ActivityIndicatorLoadingView}
                 startInLoadingState={true}
             />
+            <View style={styles.footer}>
+              <Text style={styles.shareText} onPress={()=> this.props.navigation.navigate('form')}>
+                {this.state.titleText}{'\n'}
+              </Text>
+            </View>
         </View>
     );
   }
 }
 
-export default centro_sf;
+export default ibero_cdmx;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EFF2F5',
+  },
+  footer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: 25,
   },
   shareText:{
     color:'#95989A',

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity } from 'react-native';
 
-class csf_full extends React.Component {
+class aicm_full extends React.Component {
   static navigationOptions = {
-       title: 'Tec Santa Fe',
+       title: 'Aeropuerto Int. Benito Juarez',
        headerTitleStyle :{textAlign: 'center', alignSelf:'center', fontSize: 18, fontWeight: 'normal', color: '#3E3E40' },
        headerStyle:{
            backgroundColor:'white',
@@ -12,7 +12,7 @@ class csf_full extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      titleText: " -  Actualiza esta escuela  - ",
+      titleText: " -  Actualiza este Aeropuerto  - ",
     };
   }
   render() {
@@ -23,14 +23,11 @@ class csf_full extends React.Component {
             barStyle='dark-content'/>
         <ScrollView>
         <View style={styles.content}>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('csf_a1')}>
-            <Image source={require('../images/Edificio1.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('aicm_t1')}>
+            <Image source={require('../images/aicm_t1.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('csf_a2')}>
-            <Image source={require('../images/Edificio2.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('csf_a3')}>
-            <Image source={require('../images/Edificio3.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('aicm_t2')}>
+            <Image source={require('../images/aicm_t2.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
         </TouchableOpacity>
         </View>
         <View style={styles.footer}>
@@ -44,7 +41,7 @@ class csf_full extends React.Component {
   }
 }
 
-export default csf_full;
+export default aicm_full;
 
 const styles = StyleSheet.create({
   container: {

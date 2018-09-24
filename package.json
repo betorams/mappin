@@ -9,11 +9,20 @@
   "dependencies": {
     "react": "16.3.1",
     "react-native": "0.55.4",
+    "react-native-action-button": "^2.8.5",
+    "react-native-dropdown-menu": "^2.0.0",
     "react-native-elements": "^0.19.1",
+    "react-native-floating-action": "^1.13.0",
     "react-native-fontawesome": "^5.7.0",
     "react-native-ionicons": "^0.2.2",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-popup-dialog": "^0.15.0",
+    "react-native-popup-menu": "^0.14.0",
+    "react-native-splash-screen": "3.0.6",
+    "react-native-splashscreen": "^1.0.0",
     "react-native-vector-icons": "^4.6.0",
-    "react-navigation": "^2.0.4"
+    "react-navigation": "^2.0.4",
+    "tcomb-form-native": "^0.6.15"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",

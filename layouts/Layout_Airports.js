@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, StatusBar, ScrollView, TouchableOpacity } from 'react-native';
-import { Button, Icon } from 'react-native-elements';
+import { Icon, Header, Button } from 'react-native-elements';
 import PopupDialog, { SlideAnimation } from 'react-native-popup-dialog';
 import ActionButton from 'react-native-action-button';
 
@@ -8,14 +8,14 @@ const slideAnimation = new SlideAnimation({
   slideFrom: 'bottom',
 });
 
-class CentrosScreen extends React.Component {
+class Aeropuertos extends React.Component {
   static navigationOptions = {
-       title: 'Centros Comerciales',
-       headerTitleStyle : {textAlign: 'center', alignSelf:'center', fontSize: 18, fontWeight: 'normal', color: '#3E3E40' },
+       title: 'Aeropuertos',
+       headerTitleStyle :{textAlign: 'center', alignSelf:'center', fontSize: 18, fontWeight: 'normal', color: '#3E3E40' },
        headerStyle:{
            backgroundColor:'white',
        },
-       };
+   };
   constructor(props) {
     super(props);
     this.state = {
@@ -65,27 +65,14 @@ class CentrosScreen extends React.Component {
             </PopupDialog>
         <ScrollView>
         <View style={styles.content}>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('centro_sf')}>
-            <Image source={require('../images/centro_santa_fe.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('aicm_full')}>
+            <Image source={require('../images/AICM_CDMX.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('antara_fh')}>
-            <Image source={require('../images/antara.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('reforma222')}>
-            <Image source={require('../images/reforma222.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('galerias_perisur')}>
-            <Image source={require('../images/perisur.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('parque_duraznos')}>
-            <Image source={require('../images/parque_duraznos.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('antea')}>
-            <Image source={require('../images/antea.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('galerias_atizapan')}>
-            <Image source={require('../images/galerias_atizapan.png')} style={{width:320, height: 210, marginTop: 25}} borderRadius={5}/>
-        </TouchableOpacity>
+        </View>
+        <View style={styles.footer}>
+          <Text style={styles.shareText} onPress={()=> this.props.navigation.navigate('form')}>
+            {this.state.titleText}{'\n'}
+          </Text>
         </View>
         </ScrollView>
         <ActionButton onPress={() => {this.popupDialog.show();}} buttonColor="#FF636E"/>
@@ -94,7 +81,7 @@ class CentrosScreen extends React.Component {
   }
 }
 
-export default CentrosScreen;
+export default Aeropuertos;
 
 const styles = StyleSheet.create({
   container: {

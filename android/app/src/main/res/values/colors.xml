@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- <color name="top">#FFA37D</color>
- <color name="bottom">#F65E76</color>
+ <color name="top">#FFF</color>
+ <color name="bottom">#FFF</color>
+ <color name="primary_dark">#F1F1F1</color>
+ <color name="statusbar">#F1F1F1</color>
 </resources>

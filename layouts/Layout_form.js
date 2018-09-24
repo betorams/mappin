@@ -13,7 +13,7 @@ class form extends React.Component {
    this.state = {
      titleText: "Comparte un mapa",
      subTitle: "¿Cómo funciona?",
-     bodyText: "En Mapin queremos que nos ayudes a servir a miles de personas subiendo un mapa creado por ti, actualizando mapas ya hechos o ayudando a otros usuarios a crear nuevos. Si quieres unirte al equipo de mapas ingresa al Drive haciendo click abajo."
+     bodyText: "En Mappin queremos que nos ayudes a servir a miles de personas subiendo un mapa creado por ti, actualizando mapas ya hechos o ayudando a otros usuarios a crear nuevos. Si quieres unirte al equipo de mapas ingresa al Drive entrando al enlace de abajo.",
    };
  }
 
@@ -24,6 +24,11 @@ class form extends React.Component {
           <TouchableOpacity onPress={()=> this.props.navigation.navigate('Home')}>
              <Icon style={styles.navItem} name="arrow-left" type="feather" size={25} color="#4f4d4c"/>
           </TouchableOpacity>
+          <View style={styles.rightNav}>
+              <TouchableOpacity onPress={()=> this.props.navigation.navigate('feedback')}>
+                 <Icon style={styles.navItem} name="edit" type="feather" size={25} color="#4f4d4c"/>
+              </TouchableOpacity>
+          </View>
         </View>
         <View style={styles.icon}>
           <TouchableOpacity>
@@ -36,9 +41,9 @@ class form extends React.Component {
           </View>
         </View>
         <View style={styles.optionGrid}>
-          <Image source={require('../images/comparte.png')} style={{width: 110, height: 90}} borderRadius={5}/>
-          <Image source={require('../images/actualiza.png')} style={{width: 110, height: 90}} borderRadius={5}/>
-          <Image source={require('../images/contribuye.png')} style={{width: 110, height: 90}} borderRadius={5}/>
+          <Image source={require('../images/comparte.png')} style={{width: 95, height: 80}} borderRadius={5}/>
+          <Image source={require('../images/actualiza.png')} style={{width: 95, height: 80}} borderRadius={5}/>
+          <Image source={require('../images/contribuye.png')} style={{width: 95, height: 80}} borderRadius={5}/>
         </View>
         <View style={styles.instructions}>
           <Text style={styles.guideText}>
@@ -77,8 +82,10 @@ const styles = StyleSheet.create({
   },
   topElements: {
     flexDirection: 'row',
-    marginLeft: 20,
     marginTop: 18,
+    paddingHorizontal: 15,
+    alignItems:'center',
+    justifyContent: 'space-between'
   },
   icon: {
     flexDirection: 'column',
@@ -90,14 +97,17 @@ const styles = StyleSheet.create({
     color: '#000',
     flexDirection: 'column',
     alignItems: 'center',
-    },
-    optionGrid: {
-    marginTop: 40,
+  },
+  optionGrid: {
+    marginTop: 30,
     marginLeft: 23,
     marginRight: 23,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  rightNav: {
+    flexDirection: 'row'
   },
   guideText: {
     marginTop: 25,
@@ -110,7 +120,6 @@ const styles = StyleSheet.create({
     marginRight: 23,
   },
   button: {
-    marginTop: 65,
     flexDirection: 'column',
     alignItems: 'center',
   }
